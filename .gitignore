@@ -1,0 +1,26 @@
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Node modules & build artifacts
+node_modules/
+frontend/node_modules/
+frontend/dist/
+dist/
+.vite/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Temporary test audio
+test_audio.wav

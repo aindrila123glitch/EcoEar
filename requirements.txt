@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+python-multipart
+librosa
+soundfile
+plotly
+pandas
+numpy
+tensorflow
+tensorflow-hub
+setuptools<70
+audioread
+birdnetlib
+resampy
+streamlit
