@@ -97,7 +97,7 @@ export default function SpeciesSection({ birdnetEnabled, species = [], detection
       <div className="flex items-center justify-between border-b border-emerald-900/30 pb-3">
         <div className="flex items-center gap-2 text-emerald-100 font-bold text-sm uppercase tracking-wider">
           <Bird className="w-5 h-5 text-emerald-400" />
-          <span>Avian Biodiversity & Species Analysis</span>
+          <span>Sound and Species Analysis</span>
         </div>
         <span className="text-xs text-emerald-400/80 bg-emerald-950/60 px-2.5 py-1 rounded-full border border-emerald-800/40 font-mono">
           BirdNET Engine Active
@@ -108,21 +108,21 @@ export default function SpeciesSection({ birdnetEnabled, species = [], detection
         {/* Left: Species Table */}
         <div className="lg:col-span-5 flex flex-col">
           <h5 className="text-xs font-semibold text-emerald-300/80 uppercase tracking-wider mb-2 flex items-center justify-between">
-            <span>Detected Species</span>
-            <span className="text-slate-400 font-mono text-[11px]">{species.length} species</span>
+            <span>Detected Sounds</span>
+            <span className="text-slate-400 font-mono text-[11px]">{species.length} {species.length === 1 ? 'sound' : 'sounds'}</span>
           </h5>
 
           {species.length === 0 ? (
             <div className="flex-1 flex flex-col items-center justify-center p-6 bg-forest-950/50 rounded-lg border border-emerald-900/20 text-center">
               <Bird className="w-8 h-8 text-emerald-700/60 mb-2" />
-              <p className="text-xs text-slate-400">No bird species identified above the confidence threshold in this recording.</p>
+              <p className="text-xs text-slate-400">No sounds or species identified above the confidence threshold in this recording.</p>
             </div>
           ) : (
             <div className="flex-1 overflow-x-auto max-h-[300px] overflow-y-auto border border-emerald-900/30 rounded-lg bg-forest-950/40">
               <table className="w-full text-left text-xs">
                 <thead className="bg-forest-900/80 text-emerald-300/90 font-semibold sticky top-0 border-b border-emerald-900/40 backdrop-blur-sm">
                   <tr>
-                    <th className="py-2 px-3">Species</th>
+                    <th className="py-2 px-3">Sound</th>
                     <th className="py-2 px-2 text-center">Calls</th>
                     <th className="py-2 px-3 text-right">Best Conf</th>
                   </tr>
