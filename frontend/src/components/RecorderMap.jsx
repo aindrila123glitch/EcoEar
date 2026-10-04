@@ -61,10 +61,10 @@ export default function RecorderMap({ recorders, selectedIndex, onSelectRecorder
         attributionControl: false,
       }).setView([20.0, 78.0], 5);
 
-      // Dark Matter tile layer
-      L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png', {
+      // OpenStreetMap tile layer (100% free, no API key required)
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
-        subdomains: 'abcd',
+        attribution: '&copy; OpenStreetMap contributors',
       }).addTo(map);
 
       markersLayerRef.current = L.layerGroup().addTo(map);
